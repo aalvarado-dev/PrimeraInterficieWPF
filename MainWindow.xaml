@@ -5,8 +5,234 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrimeraInterficie"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="PrimeraInterficie" Height="450" Width="800">
+    <Window.Resources>
+
+        <Style x:Key="PrecioTPV" TargetType="TextBox">
+            <Setter Property="Grid.Row" Value="0"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Height" Value="30px"/>
+            <Setter Property="Width" Value="150px"/>
+            <Setter Property="FontSize" Value="20px"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="Red"/>
+        </Style>
+
+        <Style x:Key="NombreVendedorTpv" TargetType="TextBox">
+            <Setter Property="Grid.Row" Value="1"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Height" Value="20px"/>
+            <Setter Property="Width" Value="130px"/>
+            <Setter Property="FontSize" Value="10px"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style x:Key="ButtonsMenu" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="10px"/>
+            <Setter Property="Margin" Value="0.5"/>
+            <Setter Property="Background" Value="LightYellow"/>
+
+        </Style>
+
+
+        <Style x:Key="ButtonsProductos" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Margin" Value="4px"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="15">
+                            <!-- Ajusta el valor de CornerRadius como desees -->
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <!--AQUI EMPIEZA EL GRID DE LOS BOTONES-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="330"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Column="0" Grid.Row="0" Background="LightCyan">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="0" Grid.Row="0" >ELIMINAR</Button>
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="0" Grid.Row="1" >REGISTRAR</Button>
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="0" Grid.Row="2">SALIR</Button>
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="1" Grid.Row="0">PATATAS</Button>
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="1" Grid.Row="1">BEBIDAS</Button>
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="1" Grid.Row="2">PASTELERIA</Button>
+
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="2" Grid.Row="0">PASTELES</Button>
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="2" Grid.Row="1">DULCES</Button>
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="3" Grid.Row="0">DULCES</Button>
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="3" Grid.Row="1">IOGURES</Button>
+
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="4" Grid.Row="0">VINOS</Button>
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="4" Grid.Row="1">ALCHOL</Button>
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="2" Grid.Row="2">CARNE</Button>
+                <Button Style="{StaticResource ButtonsMenu}" Grid.Column="3" Grid.Row="3">CLIENTES</Button>
+            </Grid>
+            <!--AQUI TERMINA EL GRID DE LOS BOTONES-->
+
+
+            <Grid Grid.Column="1" Grid.Row="1" Background="LightBlue">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Style="{StaticResource ButtonsProductos}" Tag="1" x:Name="NUM1" Grid.Column="0" Grid.Row="0">
+                    <Image x:Name="Produc1" />
+                </Button>
+                <Button Style="{StaticResource ButtonsProductos}" Tag="2" x:Name="NUM2" Grid.Column="0" Grid.Row="1">
+                    <Image x:Name="Produc2" Source="Patatas/rufflesjamon.jpg"/>
+                </Button>
+                <Button Style="{StaticResource ButtonsProductos}" Tag="3" x:Name="NUM3" Grid.Column="0" Grid.Row="2">
+                    <Image x:Name="Produc3" Source="Patatas/rufflesjamon.jpg"/>
+                </Button>
+                <Button Style="{StaticResource ButtonsProductos}" Tag="4" x:Name="NUM4" Grid.Column="0" Grid.Row="3">
+                    <Image x:Name="Produc4" Source="Patatas/Ruffles.jpg"/>
+                </Button>
+
+                <Button Style="{StaticResource ButtonsProductos}" Tag="5" x:Name="NUM5" Grid.Column="1" Grid.Row="0">
+                    <Image x:Name="Produc5" Source="Patatas/RubioPremium.jpg"/>
+                </Button>
+                <Button Style="{StaticResource ButtonsProductos}" Tag="6" x:Name="NUM6" Grid.Column="1" Grid.Row="1">
+                    <Image x:Name="Produc6" Source="Patatas/palomitasdulces.jpg"/>
+                </Button>
+                <Button Style="{StaticResource ButtonsProductos}" Tag="7" x:Name="NUM7" Grid.Column="1" Grid.Row="2">
+                    <Image x:Name="Produc7" Source="Patatas/palomitas.jpg"/>
+                </Button>
+                <Button Style="{StaticResource ButtonsProductos}" Tag="8" x:Name="NUM8" Grid.Column="1" Grid.Row="3">
+                    <Image x:Name="Produc8" Source="Patatas/oya.jpg"/>
+                </Button>
+
+                <Button Style="{StaticResource ButtonsProductos}" Tag="9" x:Name="NUM9" Grid.Column="2" Grid.Row="0">
+                    <Image x:Name="Produc9" Source="Patatas/layshorno.jpg"/>
+                </Button>
+                <Button Style="{StaticResource ButtonsProductos}" Tag="10" x:Name="NUM10" Grid.Column="2" Grid.Row="1">
+                    <Image x:Name="Produc10" Source="Patatas/Lays.jpg"/>
+                </Button>
+                <Button Style="{StaticResource ButtonsProductos}" Tag="11" x:Name="NUM11" Grid.Column="2" Grid.Row="2">
+                    <Image x:Name="Produc11" Source="Patatas/jumpers.jpg"/>
+                </Button>
+                <Button Style="{StaticResource ButtonsProductos}" Tag="12" x:Name="NUM12" Grid.Column="2" Grid.Row="3">
+                    <Image x:Name="Produc12" Width="50" Height="50" Source="Patatas/Gublins.jpg"/>
+                </Button>
+
+                <Button Style="{StaticResource ButtonsProductos}" Tag="13" x:Name="NUM13" Grid.Column="3" Grid.Row="0">
+                    <Image x:Name="Produc13" Width="50" Height="50" Source="Patatas/FritChili.jpg"/>
+                </Button>
+                <Button Style="{StaticResource ButtonsProductos}" Tag="14" x:Name="NUM14" Grid.Column="3" Grid.Row="1">
+                    <Image x:Name="Produc14" Width="50" Height="50" Source="Patatas/Conos.jpg"/>
+                </Button>
+                <Button Style="{StaticResource ButtonsProductos}" Tag="15" x:Name="NUM15" Grid.Column="3" Grid.Row="2">
+                    <Image x:Name="Produc15" Width="50" Height="50" Source="Patatas/chetos.jpg"/>
+                </Button>
+                <Button Style="{StaticResource ButtonsProductos}" Tag="16" x:Name="NUM16" Grid.Column="3" Grid.Row="3"/>
+                <Image x:Name="Produc16" Width="50" Height="50" Source="Patatas/Bits.jpg"/>
+
+            </Grid>
+            <!--AQUI TERMINA EL GRID DE LOS BOTONES-->
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <DataGrid  Grid.Column="1" Grid.Row="0" Name="dataGrid" AutoGenerateColumns="False" Background="White">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Detalle de Venta" Binding="{Binding Nombre}" Width="*"/>
+                    <DataGridTextColumn Header="Precio" Binding="{Binding Precio}" Width="*"/>
+                    <DataGridTextColumn Header="Cod. Producto" Binding="{Binding Id}" Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Grid Grid.Row="1" Grid.Column="0" Background="LightCyan">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="TOTAL: " Width="100" Height="30" FontWeight="Bold" FontSize="15px" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                <TextBox x:Name="VentanaPrecio" Style="{StaticResource PrecioTPV}"/>
+
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="1" Grid.Column="0" Content="VENDEDOR: " Width="100" Height="30" FontWeight="Bold" FontSize="10px" />
+                    <TextBox x:Name="NombreVendedorTPV" Style="{StaticResource NombreVendedorTpv}"/>
+
+                </Grid>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

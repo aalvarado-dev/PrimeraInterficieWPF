@@ -1,0 +1,15 @@
+C:\Users\alvar\source\repos\PrimeraInterficie\obj\Debug\PrimeraInterficie.csproj.AssemblyReference.cache
+C:\Users\alvar\source\repos\PrimeraInterficie\obj\Debug\MainWindow.g.cs
+C:\Users\alvar\source\repos\PrimeraInterficie\obj\Debug\App.g.cs
+C:\Users\alvar\source\repos\PrimeraInterficie\obj\Debug\PrimeraInterficie_MarkupCompile.cache
+C:\Users\alvar\source\repos\PrimeraInterficie\obj\Debug\PrimeraInterficie_MarkupCompile.lref
+C:\Users\alvar\source\repos\PrimeraInterficie\bin\Debug\PrimeraInterficie.exe.config
+C:\Users\alvar\source\repos\PrimeraInterficie\bin\Debug\PrimeraInterficie.exe
+C:\Users\alvar\source\repos\PrimeraInterficie\bin\Debug\PrimeraInterficie.pdb
+C:\Users\alvar\source\repos\PrimeraInterficie\obj\Debug\MainWindow.baml
+C:\Users\alvar\source\repos\PrimeraInterficie\obj\Debug\PrimeraInterficie.g.resources
+C:\Users\alvar\source\repos\PrimeraInterficie\obj\Debug\PrimeraInterficie.Properties.Resources.resources
+C:\Users\alvar\source\repos\PrimeraInterficie\obj\Debug\PrimeraInterficie.csproj.GenerateResource.cache
+C:\Users\alvar\source\repos\PrimeraInterficie\obj\Debug\PrimeraInterficie.csproj.CoreCompileInputs.cache
+C:\Users\alvar\source\repos\PrimeraInterficie\obj\Debug\PrimeraInterficie.exe
+C:\Users\alvar\source\repos\PrimeraInterficie\obj\Debug\PrimeraInterficie.pdb
